@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 02</title>
+<script>
+
+	function person() {
+		this.designation = "Teacher"
+	}
+
+
+	function student() {
+		this.n = "Garima";
+	}
+
+	//student.prototype = Object.create(person.prototype);
+	student.prototype = new person();
+
+	var ins = new student();
+	alert(ins.designation);	
+	alert(ins.n);
+
+	ins.designation = "Clerk";
+	alert(ins.designation);
+</script>
+</head>
+<body>
+</body>
+</html>
